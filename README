@@ -1,0 +1,77 @@
+Nume: Pavăl Bogdan-Costin
+Grupa: 322CA
+
+	Fisierul solovay.h este header cu functiile folosite in implementarea
+algoritmului Solovay-Strassen.
+
+	Fisierul solovay.cpp reprezinta implementarea algoritmului
+Solovay-Strassen.
+
+	Fisierul lucas.h este header cu functiile folosite in implementarea
+algoritmului Lucas.
+
+	Fisierul lucas.cpp reprezinta implementarea algoritmului Lucas.
+
+	Fisierele main_solovay.cpp si main_lucas.cpp reprezinta punctul central
+al programelor, ambele fiind implementate asemanator. Se apeleaza functia
+open_test pentru a deschide fisierul "./test.in", unde checkerul pune pe rand
+continutul fiecarui fisier din directorul in si apeleaza functia print_solovay
+/ print_lucas pentru a afisa rezultatul programului in fisierul "./test.out".
+Acest fisier se compara cu continutul fisierului corespunzator din directorul
+out. Inainte de a incepe executia programului, se seteaza o variabila de timp
+si inca una dupa terminarea executiei. Durata executiei se afla prin diferenta
+celor doi timp, iar rezultatul poate fi afisat pe ecran decomentand linia cu
+afisarea timpului, afisarea avand forma: "PASSED in X microsecunde". Criteriul
+principal al analizei testelor este timpul de executie, comparand timpii pentru
+cei doi algoritmi.
+
+	Fisierul README.
+
+	Fisierul Makefile.
+
+	Detalii despre evaluare:
+
+Testele au fost generate folosind site-ul https://www.random.org/integers/,
+care genereaza numere aleatoriu.
+Fiecare test de intrare are pe prima linie un numar N din intervalul
+[-1; 1000000], apoi N numere pe cate o linie.
+
+In directorul in se gasesc fisierele de intrare, numite de forma testX.in:
+
+testele 1 - 4 au cel mult 10 numere si testeaza cazurile de baza
+testul 5 are 15 numere < 100
+testul 6 are 1000 de numere < 1000
+testul 7 are 1000 de numere < 10000
+testul 8 are 2000 de numere < 1000
+testul 9 are 2000 de numere < 1000
+testul 10 are 2000 de numere < 10000
+testul 11 are 2500 de numere < 10
+testul 12 are 2500 de numere < 100
+testul 13 are 3000 de numere < 1000
+testul 14 are 3000 de numere < 10000
+testul 15 are 4000 de numere < 1000
+testul 16 are 4000 de numere < 10000
+testul 17 are 5000 de numere < 1000
+testul 18 are 5000 de numere < 10000
+testul 19 are 7000 de numere < 10000
+testul 20 are 1500 de numere prime
+testul 21 are 8000 de numere < 1000
+testul 22 are 8000 de numere < 10000
+testul 23 are 9000 de numere < 1000
+testul 24 are 5000 de numere prime
+testul 25 are 100000 de numere < 10000
+
+
+In directorul out se gasesc fisierele cu rezultatele corecte, numite de forma
+testX.out. Fiecare test de iesire are pe prima linie un numar M, apoi M numere
+prime pe cate o linie.
+
+Agoritmul Solovay-Strassen are la baza implementarea de pe site-ul
+https://www.geeksforgeeks.org/primality-test-set-4-solovay-strassen/, fiind
+o forma imbunatatita de mine pentru a se mula pe cerintele temei si modului meu
+de implementare. Acest algoritm este si la regula run-best.
+
+Agoritmul Lucas are la baza implementarea de pe site-ul
+https://www.geeksforgeeks.org/lucas-primality-test/, fiind o forma imbunatatita
+de mine asemanatoare ca in cazul algoritmului anterior. Rularea acestui
+algoritm dureaza putin mai mult decat rularea algoritmului anterior.
